@@ -1,0 +1,202 @@
+<svg viewBox="0 0 1800 1400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="h" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#1e3a8a"/><stop offset="100%" style="stop-color:#3b82f6"/></linearGradient>
+<linearGradient id="d" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#10b981"/><stop offset="100%" style="stop-color:#059669"/></linearGradient>
+<linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#1e40af"/></linearGradient>
+<linearGradient id="db" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8b5cf6"/><stop offset="100%" style="stop-color:#6d28d9"/></linearGradient>
+<linearGradient id="ui" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#0284c7"/></linearGradient>
+<filter id="s"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.3"/></filter>
+<marker id="ag" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0,10 3,0 6" fill="#059669"/></marker>
+<marker id="ab" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0,10 3,0 6" fill="#1e40af"/></marker>
+<marker id="ao" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0,10 3,0 6" fill="#d97706"/></marker>
+<marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0,10 3,0 6" fill="#dc2626"/></marker>
+<marker id="ap" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><polygon points="0 0,10 3,0 6" fill="#6d28d9"/></marker>
+</defs>
+
+<!-- Header -->
+<rect width="1800" height="80" fill="url(#h)"/>
+<text x="900" y="50" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">Ground Control Station - System Architecture</text>
+
+<!-- Layer 1: External Systems -->
+<text x="900" y="140" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Layer 1: External Systems</text>
+<line x1="100" y1="155" x2="1700" y2="155" stroke="#cbd5e1" stroke-width="3"/>
+
+<!-- Drone 1 -->
+<g filter="url(#s)">
+<rect x="100" y="190" width="320" height="140" rx="12" fill="url(#d)"/>
+<text x="260" y="230" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Drone 1 (Scout/Scan)</text>
+<text x="125" y="265" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">• CSV Telemetry Stream</text>
+<text x="125" y="290" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">• Detection Events</text>
+<text x="125" y="315" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">• Real-time GPS Position</text>
+</g>
+
+<!-- Drone 2 -->
+<g filter="url(#s)">
+<rect x="480" y="190" width="320" height="140" rx="12" fill="url(#d)"/>
+<text x="640" y="230" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Drone 2 (Delivery/Spray)</text>
+<text x="505" y="265" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">• CSV Telemetry Stream</text>
+<text x="505" y="290" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">• Payload Control Data</text>
+<text x="505" y="315" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5">• Mission Commands</text>
+</g>
+
+<!-- KML Data Files -->
+<g filter="url(#s)">
+<rect x="860" y="190" width="320" height="140" rx="12" fill="#f59e0b"/>
+<text x="1020" y="230" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">KML Data Files</text>
+<text x="885" y="265" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7">• Geofence Boundaries</text>
+<text x="885" y="290" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7">• Mission Waypoints</text>
+<text x="885" y="315" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7">• Flight Zones</text>
+</g>
+
+<!-- Map Tile Servers -->
+<g filter="url(#s)">
+<rect x="1240" y="190" width="320" height="140" rx="12" fill="#ef4444"/>
+<text x="1400" y="230" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Map Tile Servers</text>
+<text x="1265" y="265" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2">• OpenStreetMap</text>
+<text x="1265" y="290" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2">• Satellite Imagery</text>
+<text x="1265" y="315" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2">• Terrain Data</text>
+</g>
+
+<!-- Arrows from Layer 1 to Layer 2 -->
+<line x1="260" y1="330" x2="260" y2="465" stroke="#059669" stroke-width="4" marker-end="url(#ag)"/>
+<text x="155" y="390" font-family="Arial, sans-serif" font-size="13" fill="#059669" font-weight="bold">Telemetry</text>
+
+<line x1="640" y1="330" x2="640" y2="465" stroke="#059669" stroke-width="4" marker-end="url(#ag)"/>
+<text x="535" y="390" font-family="Arial, sans-serif" font-size="13" fill="#059669" font-weight="bold">Telemetry</text>
+
+<line x1="1020" y1="330" x2="1020" y2="465" stroke="#d97706" stroke-width="4" marker-end="url(#ao)"/>
+<text x="920" y="390" font-family="Arial, sans-serif" font-size="13" fill="#d97706" font-weight="bold">KML Data</text>
+
+<line x1="1400" y1="330" x2="1400" y2="465" stroke="#dc2626" stroke-width="4" marker-end="url(#ar)"/>
+<text x="1300" y="390" font-family="Arial, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Map Tiles</text>
+
+<!-- Layer 2: Core GCS Application -->
+<text x="900" y="450" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Layer 2: Core GCS Application</text>
+<line x1="100" y1="465" x2="1700" y2="465" stroke="#cbd5e1" stroke-width="3"/>
+
+<g filter="url(#s)">
+<rect x="200" y="500" width="1400" height="130" rx="12" fill="url(#g)"/>
+<text x="900" y="540" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">GCS Interface Application (gcs_interface.py)</text>
+<text x="280" y="575" font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">• CSV Telemetry Parser</text>
+<text x="280" y="600" font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">• Data Models</text>
+<text x="700" y="575" font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">• PyQt5 Main Window</text>
+<text x="700" y="600" font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">• Real-time Processing</text>
+<text x="1120" y="575" font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">• Database Handler</text>
+<text x="1120" y="600" font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">• SQLite Integration</text>
+</g>
+
+<!-- Arrow from Layer 2 to Layer 3 -->
+<line x1="900" y1="630" x2="900" y2="725" stroke="#6d28d9" stroke-width="4" marker-end="url(#ap)" stroke-dasharray="8,5"/>
+<text x="740" y="680" font-family="Arial, sans-serif" font-size="14" fill="#6d28d9" font-weight="bold">Store/Query Data</text>
+
+<!-- Layer 3: Data Persistence -->
+<text x="900" y="715" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Layer 3: Data Persistence</text>
+<line x1="100" y1="730" x2="1700" y2="730" stroke="#cbd5e1" stroke-width="3"/>
+
+<g filter="url(#s)">
+<rect x="300" y="765" width="1200" height="120" rx="12" fill="url(#db)"/>
+<text x="900" y="805" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">SQLite Database (mission_data.db)</text>
+<text x="370" y="840" font-family="Arial, sans-serif" font-size="15" fill="#ede9fe">• telemetry table</text>
+<text x="370" y="865" font-family="Arial, sans-serif" font-size="15" fill="#ede9fe">• detections table</text>
+<text x="640" y="840" font-family="Arial, sans-serif" font-size="15" fill="#ede9fe">• commands table</text>
+<text x="640" y="865" font-family="Arial, sans-serif" font-size="15" fill="#ede9fe">• missions table</text>
+<text x="930" y="840" font-family="Arial, sans-serif" font-size="15" fill="#ede9fe">• configuration table</text>
+<text x="930" y="865" font-family="Arial, sans-serif" font-size="15" fill="#ede9fe">• CSV Export</text>
+</g>
+
+<!-- Arrows from Layer 3 to Layer 4 - Non-overlapping paths -->
+<path d="M 400 885 L 400 935 L 230 935 L 230 985" stroke="#1e40af" stroke-width="3" fill="none" marker-end="url(#ab)"/>
+<path d="M 650 885 L 650 955 L 550 955 L 550 985" stroke="#1e40af" stroke-width="3" fill="none" marker-end="url(#ab)"/>
+<path d="M 1050 885 L 1050 955 L 1100 955 L 1100 985" stroke="#1e40af" stroke-width="3" fill="none" marker-end="url(#ab)"/>
+<path d="M 1300 885 L 1300 935 L 1450 935 L 1450 985" stroke="#1e40af" stroke-width="3" fill="none" marker-end="url(#ab)"/>
+
+<!-- Layer 4: User Interface Components -->
+<text x="900" y="975" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Layer 4: User Interface Components</text>
+<line x1="100" y1="990" x2="1700" y2="990" stroke="#cbd5e1" stroke-width="3"/>
+
+<!-- Status and Control -->
+<g filter="url(#s)">
+<rect x="90" y="1025" width="310" height="150" rx="12" fill="url(#ui)"/>
+<text x="245" y="1060" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Status and Control</text>
+<text x="115" y="1095" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Battery Level</text>
+<text x="115" y="1118" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Link Quality</text>
+<text x="115" y="1141" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Mission Commands</text>
+<text x="115" y="1164" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Flight Mode</text>
+</g>
+
+<!-- Live Map -->
+<g filter="url(#s)">
+<rect x="450" y="1025" width="310" height="150" rx="12" fill="url(#ui)"/>
+<text x="605" y="1060" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Live Map (Leaflet.js)</text>
+<text x="475" y="1095" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Real-time GPS Markers</text>
+<text x="475" y="1118" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Flight Trail History</text>
+<text x="475" y="1141" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• KML Geofence Overlays</text>
+<text x="475" y="1164" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Map Tile Layers</text>
+</g>
+
+<!-- Gauges and Charts -->
+<g filter="url(#s)">
+<rect x="810" y="1025" width="310" height="150" rx="12" fill="url(#ui)"/>
+<text x="965" y="1060" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Gauges and Charts</text>
+<text x="835" y="1095" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Altitude Gauge</text>
+<text x="835" y="1118" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Speed Gauge</text>
+<text x="835" y="1141" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Battery Gauge</text>
+<text x="835" y="1164" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Real-time Charts</text>
+</g>
+
+<!-- 3D View and Logs -->
+<g filter="url(#s)">
+<rect x="1170" y="1025" width="310" height="150" rx="12" fill="url(#ui)"/>
+<text x="1325" y="1060" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">3D View and Logs</text>
+<text x="1195" y="1095" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• pyqtgraph.opengl</text>
+<text x="1195" y="1118" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• 3D Drone Models</text>
+<text x="1195" y="1141" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Attitude Display</text>
+<text x="1195" y="1164" font-family="Arial, sans-serif" font-size="13" fill="#e0f2fe">• Event Logs</text>
+</g>
+
+<!-- Legend -->
+<g>
+<text x="100" y="1215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">Legend:</text>
+<line x1="170" y1="1210" x2="220" y2="1210" stroke="#059669" stroke-width="4"/><text x="230" y="1215" font-family="Arial, sans-serif" font-size="13" fill="#1e3a8a">Telemetry</text>
+<line x1="320" y1="1210" x2="370" y2="1210" stroke="#1e40af" stroke-width="3"/><text x="380" y="1215" font-family="Arial, sans-serif" font-size="13" fill="#1e3a8a">UI Data Flow</text>
+<line x1="490" y1="1210" x2="540" y2="1210" stroke="#6d28d9" stroke-width="4" stroke-dasharray="8,5"/><text x="550" y="1215" font-family="Arial, sans-serif" font-size="13" fill="#1e3a8a">Database Ops</text>
+<line x1="680" y1="1210" x2="730" y2="1210" stroke="#d97706" stroke-width="4"/><text x="740" y="1215" font-family="Arial, sans-serif" font-size="13" fill="#1e3a8a">External Data</text>
+<line x1="870" y1="1210" x2="920" y2="1210" stroke="#dc2626" stroke-width="4"/><text x="930" y="1215" font-family="Arial, sans-serif" font-size="13" fill="#1e3a8a">Map Services</text>
+</g>
+
+<!-- Technology Stack -->
+<g filter="url(#s)">
+<rect x="80" y="1245" width="1640" height="145" rx="12" fill="#1e293b"/>
+<text x="900" y="1280" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Technology Stack</text>
+<line x1="100" y1="1295" x2="1700" y2="1295" stroke="#475569" stroke-width="2"/>
+
+<!-- Tech stack columns -->
+<text x="150" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">UI Framework:</text>
+<text x="150" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• PyQt5 • QWebEngine</text>
+<text x="150" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• Qt Designer</text>
+
+<text x="400" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">Mapping:</text>
+<text x="400" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• Leaflet.js • OSM Tiles</text>
+<text x="400" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• KML Parser</text>
+
+<text x="630" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">Visualization:</text>
+<text x="630" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• pyqtgraph • OpenGL</text>
+<text x="630" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• Matplotlib</text>
+
+<text x="870" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">Database:</text>
+<text x="870" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• SQLite3 • SQL Alchemy</text>
+<text x="870" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• CSV Export</text>
+
+<text x="1090" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">3D Models:</text>
+<text x="1090" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• pywavefront • OBJ/STL</text>
+<text x="1090" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• GLTFLoader</text>
+
+<text x="1310" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">Data Formats:</text>
+<text x="1310" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• Extended CSV • JSON</text>
+<text x="1310" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• KML/KMZ</text>
+
+<text x="1540" y="1325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">Language:</text>
+<text x="1540" y="1347" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• Python 3.8+ • JavaScript</text>
+<text x="1540" y="1367" font-family="Arial, sans-serif" font-size="13" fill="#cbd5e1">• HTML/CSS</text>
+</g>
+</svg>
